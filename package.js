@@ -1,29 +1,14 @@
-Package.describe({
-	name: 'reywood:bootstrap3-sass',
-	summary: 'Bootstrap 3 with Sass support',
-	version: '3.3.7_1',
-	git: 'https://github.com/englue/meteor-bootstrap3-sass.git'
-});
+Package.describe({name: 'reywood:bootstrap3-sass', summary: 'Bootstrap 3 with Sass support', version: '3.3.7_2', git: 'https://github.com/englue/meteor-bootstrap3-sass.git'});
 
-Package.onUse(function (api) {
-	api.versionsFrom('METEOR@1.3.2');
+Package.onUse(function(api) {
+	api.versionsFrom('METEOR@1.4.1');
 
-	api.use([
-		'meteor',
-		'jquery',
-		'fourseven:scss@3.4.3'
-	]);
+	api.use(['meteor', 'jquery', 'fourseven:scss@4.5.4']);
 
-	api.addFiles([
-		'assets/javascripts/bootstrap.js'
-	], 'client');
+	api.addFiles(['assets/javascripts/bootstrap.js'], 'client');
 
 	api.addAssets([
-		'assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
-		'assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
-		'assets/fonts/bootstrap/glyphicons-halflings-regular.ttf',
-		'assets/fonts/bootstrap/glyphicons-halflings-regular.woff',
-		'assets/fonts/bootstrap/glyphicons-halflings-regular.woff2'
+		'assets/fonts/bootstrap/glyphicons-halflings-regular.eot', 'assets/fonts/bootstrap/glyphicons-halflings-regular.svg', 'assets/fonts/bootstrap/glyphicons-halflings-regular.ttf', 'assets/fonts/bootstrap/glyphicons-halflings-regular.woff', 'assets/fonts/bootstrap/glyphicons-halflings-regular.woff2'
 	], 'client');
 
 	api.addFiles([
@@ -106,14 +91,13 @@ Package.onTest(function(api) {
 	api.use([
 		'ecmascript',
 		'modules',
-		'fourseven:scss@3.4.3',
+		'fourseven:scss@4.5.4',
 		'jquery',
 		'tinytest',
 		'test-helpers'
 	]);
 
 	api.addFiles([
-		'tests.scss',
-		'tests.js'
+		'tests.scss', 'tests.js'
 	], 'client');
 });
